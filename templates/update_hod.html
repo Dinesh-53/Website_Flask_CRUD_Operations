@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update student</title>
+</head>
+<body>
+<form action="/updatehodtodb" method="POST">
+    <table>
+        <tr><td>Enter HOD id</td><td><input type="text" name="hid" value ={{rows[0][0]}} readonly></td></tr>
+        <tr><td>Enter the HOD name:</td><td><input type="text" name="hname" value ={{rows[0][1]}}></td></tr>
+        <tr><td>Enter the HOD phone number:</td><td><input type="text" name="hphone" value = {{rows[0][2]}}></td></tr>
+        <tr><td><input type="submit" value="save"></td></tr>
+    </table>
+</form>
+</body>
+</html>

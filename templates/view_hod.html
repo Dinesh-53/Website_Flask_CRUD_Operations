@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOD Page</title>
+</head>
+<body>
+<h2>HOD Details</h2>
+<table border = 4>
+    <thead>
+    <td>HOD ID</td>
+    <td>HOD name</td>
+    <td>Phonenumber</td>
+    <td colspan="2">action</td>
+    </thead>
+    {% for row in rows %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td><a href = "{{row[0]}}/hedit">Edit</a> <a href = "{{row[0]}}/hdelete">Delete</a> </td>
+    </tr>
+    {% endfor %}
+
+<!--<table border = 4>-->
+<td><a href = "/hdeleteall">Delete All</a></td>
+
+</table>
+</body>
+</html>

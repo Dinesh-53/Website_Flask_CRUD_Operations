@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student page</title>
+</head>
+<form action="/savestudenttodb" method="POST">
+    <table>
+        <tr><td>Enter Student Name</td><td><input type="text" name="sname"></td></tr>  <!-- tr - ROW, td - COLUMN -->
+        <tr><td>Enter Mark 1</td><td><input type="number" name="sm1"></td></tr>
+        <tr><td>Enter Mark 2</td><td><input type="number" name="sm2"></td></tr>
+        <tr><td>Enter Mark 3</td><td><input type="number" name="sm3"></td></tr>
+       <!-- <tr><td>Enter Your Department Name</td><td><input type="text" name="dname"></td></tr> -->
+
+        <tr><td><label for="Department">Choose Your Department Name</label></td>
+            <td>
+            <select name = "dname">
+                <option value="Civil">Civil</option>
+                <option value="Mech">Mech</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+            </select></td></tr>
+
+        <tr><td><label for="Location">Choose a location:</label></td>
+                                <td>
+
+                                <select name="locations" id="locations">
+                                  <option value="Chengalpattu">CHENGALPATTU</option>
+                                  <option value="Chennai">CHENNAI</option>
+                                  <option value="Madurai">MADURAI</option>
+                                  <option value="Dhanushkodi">DHANUSHKODI</option>
+                                </select></td></tr>
+        <tr><td>Enter Your Gender</td><td><input type="radio" id="male" name="gender" value="MALE">
+                                            <label for="male">MALE</label><br>
+                                            <input type="radio" id="female" name="gender" value="FEMALE">
+                                            <label for="female">FEMALE</label><br></td></tr>
+        <tr><td>Enter Your Phone Number</td><td><input type="number" name="sphone"></td></tr>
+        <tr><td>DOB</td><td><input type="date" name="sdob"></td></tr>
+        <tr><td><input type="submit" value="save"></td></tr>
+
+
+    </table>
+</form>
+<body>
+<a href="/">home page</a>  <!-- HOME PAGE - LINK -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+</head>
+<body>
+<h3>Student Details</h3>
+<table border = 4>
+    <thead>
+    <td>Student ID</td>
+    <td>Student Name</td>
+    <td>Subject 1</td>
+    <td>Subject 2</td>
+    <td>Subject 3</td>
+    <td>Department</td>
+    <td>Location</td>
+    <td>Gender</td>
+    <td>Phone Number</td>
+    <td>D.O.B</td>
+    <td colspan="2">Action</td>
+    </thead>
+    {% for row in rows %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+        <td>{{row[6]}}</td>
+        <td>{{row[7]}}</td>
+        <td>{{row[8]}}</td>
+        <td>{{row[9]}}</td>
+        <td><a href = "{{row[0]}}/sedit">Edit</a> <a href = "{{row[0]}}/sdelete">Delete</a> </td>
+    </tr>
+    {% endfor %}
+
+<td><a href = "/sdeleteall">Delete All</a></td>
+</table>
+</body>
+</html>

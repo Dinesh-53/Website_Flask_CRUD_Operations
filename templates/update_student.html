@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update student</title>
+</head>
+<body>
+<form action="/updatestudenttodb" method="POST">
+    <table>
+        <tr><td>Enter Stduent id</td><td><input type="text" name="sid" value ={{rows[0][0]}} readonly></td></tr>
+        <tr><td>Enter Student Name</td><td><input type="text" name="sname" value ={{rows[0][1]}}></td></tr>
+        <tr><td>Enter Mark 1</td><td><input type="number" name="sm1" value ={{rows[0][2]}}></td></tr>
+        <tr><td>Enter Mark 2</td><td><input type="number" name="sm2" value ={{rows[0][3]}}></td></tr>
+        <tr><td>Enter Mark 3</td><td><input type="number" name="sm3" value ={{rows[0][4]}}></td></tr>
+       <!-- <tr><td>Enter Your Department Name</td><td><input type="text" name="dname" value ={{rows[0][5]}}></td></tr> -->
+        <tr><td><label for="Department">Choose a Department:</label></td>
+                                <td>
+                                    <select name = "dname">
+                                        {% for option in available_dept %}
+                                            {% if option == selected_Dept %}
+                                                <option value="{{ option }}" selected>{{ option }}</option>
+                                            {% else %}
+                                                <option value="{{ option }}">{{ option }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </td></tr>
+
+
+        <tr><td><label for="Location">Choose a location:</label></td>
+                                <td>
+                                    <select name="locations">
+                                        {% for option in available_options %}
+                                            {% if option == selected_value %}
+                                                <option value="{{ option }}" selected>{{ option }}</option>
+                                            {% else %}
+                                                <option value="{{ option }}">{{ option }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </td></tr>
+
+        <tr><td>Enter Your Gender</td>
+            <td>
+            {% for option in gender_opt %}
+            <input type="radio" id="{{ option }}" name="gender" value="{{ option }}"
+                {% if option == gender_value %}
+                    checked
+                {% endif %}
+            >
+            <label for="{{ option }}">{{ option }}</label><br>
+        {% endfor %}
+        </td></tr>
+        <tr><td>Enter Your Phone Number</td><td><input type="number" name="sphone" value ={{rows[0][8]}}></td></tr>
+        <tr><td>DOB</td><td><input type="date" name="sdob" value ={{rows[0][9]}}></td></tr>
+        <tr><td><input type="submit" value="save"></td></tr>
+
+
+    </table>
+</form>
+</body>
+</html>
